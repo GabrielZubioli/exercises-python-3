@@ -1,0 +1,23 @@
+class Carro: 
+    def __init__(self, nome, modelo, velocidade):
+        self.nome = nome
+        self.modelo = modelo
+        self.velocidade = velocidade
+
+def acelerarCarro(carro):
+    carro.velocidade = carro.velocidade + 50
+    return carro
+
+nome = str(input("Qual o nome do carro :"))
+modelo = str(input("Qual o modelo do carro :"))
+velocidade = int(input("Qual a velocidade do carro :"))
+carro1 = Carro(nome, modelo, velocidade)
+
+acelerar = str(input("deseja acelerar? (S/N)"))
+if acelerar == "S" :
+    acelerarCarro(carro1)
+
+
+
+print(f"Nome: {carro1.nome}\nModelo: {carro1.modelo}\nVelocidade: {carro1.velocidade}")
+
